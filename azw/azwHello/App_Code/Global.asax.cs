@@ -18,7 +18,7 @@ using System;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
-using System.Web.Optimization;
+//using System.Web.Optimization;
 using System.Web.Routing;
 
 namespace HelloAllWorlds
@@ -54,7 +54,8 @@ namespace HelloAllWorlds
             AreaRegistration.RegisterAllAreas();
             MvcApplication.RegisterGlobalFilters(GlobalFilters.Filters);
             MvcApplication.RegisterRoutes(RouteTable.Routes);
-            BundleTable.Bundles.RegisterTemplateBundles();
+            
+            //BundleTable.Bundles.RegisterTemplateBundles();
         }
     }
 }
