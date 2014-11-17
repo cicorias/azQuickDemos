@@ -16,3 +16,9 @@ Set-AzureStorageAccount -StorageAccountName $strg -GeoReplicationEnabled $false
 .\New-HDInsightCluster.ps1 -Cluster $clusterName -Location $location  `
       -DefaultStorageAccount $strg -DefaultStorageContainer $container `
       -ClusterSizeInNodes 1
+
+
+
+#destroy  
+
+Remove-AzureHDInsightCluster -Name $clustername
