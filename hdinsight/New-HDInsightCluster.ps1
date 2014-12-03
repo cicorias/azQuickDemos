@@ -40,7 +40,10 @@ param (
 
     # Credentials to be used for the new cluster
     [Parameter(Mandatory = $false)]
-    [PSCredential]$Credential = $null)
+    [PSCredential]$Credential = $null,
+
+    [Parameter(Mandatory = $false)]
+    [String]$ClusterType = "Hadoop")
 
 
 # The script has been tested on Powershell 3.0
@@ -99,4 +102,5 @@ New-AzureHDInsightCluster -Name $Cluster -Location $Location `
         -DefaultStorageAccountKey (Get-AzureStorageKey $DefaultStorageAccount).Primary `
         -DefaultStorageContainerName $DefaultStorageContainer `
         -Credential $Credential `
-        -ClusterSizeInNodes $ClusterSizeInNodes
+        -ClusterSizeInNodes $ClusterSizeInNodes `
+        -ClusterType $ClusterType
