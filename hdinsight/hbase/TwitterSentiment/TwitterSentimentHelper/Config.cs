@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using Newtonsoft.Json;
 using System.IO;
+using System.Reflection;
 
 namespace TwitterSentimentHelper
 {
@@ -79,10 +80,23 @@ namespace TwitterSentimentHelper
             {
                 if (null == s_instance)
                 {
-                    Config cfg = JsonConvert.DeserializeObject<Config>(File.ReadAllText("config.private"));
+                    var localPath = Path.Combine(AssemblyDirectory, "config.private");
+                    Config cfg = JsonConvert.DeserializeObject<Config>(File.ReadAllText(localPath));
                     s_instance = cfg;
                 }
                 return s_instance;
+            }
+        }
+
+
+        public static string AssemblyDirectory
+        {
+            get
+            {
+                string codeBase = Assembly.GetExecutingAssembly().CodeBase;
+                UriBuilder uri = new UriBuilder(codeBase);
+                string path = Uri.UnescapeDataString(uri.Path);
+                return Path.GetDirectoryName(path);
             }
         }
 

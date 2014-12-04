@@ -9,10 +9,14 @@ using TweetSentimentWeb.Models;
 
 namespace TweetSentimentWeb.Controllers
 {
-    [RoutePrefix("/api/tweets")]
-    public class TweetsController : ApiController
+    public class Tweet2Controller : ApiController
     {
         HBaseReader hbase = new HBaseReader();
+
+        public Task<string[]> Get()
+        {
+            return Task.FromResult<string[]>( new string[] {"two", "one"});
+        }
 
         public async Task<IEnumerable<Tweet>> GetTweetsByQuery(string query)
         {
