@@ -4,5 +4,7 @@
 
 Invoke-RestMethod https://scicoriahdp2cluster.azurehdinsight.net/hbaserest -Credential $creds
 
+Invoke-RestMethod https://scicoriahdp2cluster.azurehdinsight.net/hbaserest/tweets_by_words -Credential $creds
+
 $row = Invoke-RestMethod https://scicoriahdp2cluster.azurehdinsight.net/hbaserest/tweets_by_words/row1 -Credential $creds
 $row.CellSet.Row.Cell
