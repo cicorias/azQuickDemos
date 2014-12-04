@@ -162,3 +162,4 @@ $RECYCLE.BIN/
 private.config
 
 *.private
+/hdinsight/hbase/TwitterSentiment/TweetSentimentWeb/Properties/PublishProfiles/CicoriaTweetSentiment.pubxml

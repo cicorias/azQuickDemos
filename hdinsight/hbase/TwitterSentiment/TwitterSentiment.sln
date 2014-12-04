@@ -5,6 +5,21 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterSentiment", "TwitterSentiment\TwitterSentiment.csproj", "{A1EAC7A9-B2D3-4EEA-BD56-4BEDB59DC0D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetSentimentWeb", "TweetSentimentWeb\TweetSentimentWeb.csproj", "{874098DF-B899-48E0-A0C9-95775FD9379C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{2A263DE0-B889-4CED-8477-DFF501BD9D2D}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{A749AFE6-1CA1-4770-8BAB-F76347524496}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\TweetSentimentWeb-WAWS-dev.json = PublishScripts\Configurations\TweetSentimentWeb-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterSentimentHelper", "TwitterSentimentHelper\TwitterSentimentHelper.csproj", "{2E12EBED-A4AE-45C0-8604-2844E163607B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +30,19 @@ Global
 		{A1EAC7A9-B2D3-4EEA-BD56-4BEDB59DC0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1EAC7A9-B2D3-4EEA-BD56-4BEDB59DC0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1EAC7A9-B2D3-4EEA-BD56-4BEDB59DC0D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874098DF-B899-48E0-A0C9-95775FD9379C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874098DF-B899-48E0-A0C9-95775FD9379C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874098DF-B899-48E0-A0C9-95775FD9379C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874098DF-B899-48E0-A0C9-95775FD9379C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E12EBED-A4AE-45C0-8604-2844E163607B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E12EBED-A4AE-45C0-8604-2844E163607B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E12EBED-A4AE-45C0-8604-2844E163607B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E12EBED-A4AE-45C0-8604-2844E163607B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A749AFE6-1CA1-4770-8BAB-F76347524496} = {2A263DE0-B889-4CED-8477-DFF501BD9D2D}
 	EndGlobalSection
 EndGlobal

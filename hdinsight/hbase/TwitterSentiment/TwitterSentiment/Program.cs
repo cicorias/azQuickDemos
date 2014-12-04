@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Diagnostics;
 using Tweetinvi;
+using TwitterSentimentHelper;
 
 namespace TwitterSentiment
 {

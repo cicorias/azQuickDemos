@@ -3,14 +3,16 @@ Add-AzureAccount
 
 Select-AzureSubscription -SubscriptionName "Microsoft Azure Internal Consumption"
 
-$strg = "scicoriahdp2"
+$strg = "scicoriahdp2west"
 $container = "hdproot"
 $clusterName = "scicoriahdp2cluster"
-$location = "East US"
+$location = "West US"
 
-$strgAccount = New-AzureStorageAccount -StorageAccountName $strg -Location $location
+#$strgAccount = New-AzureStorageAccount -StorageAccountName $strg -Location $location
 
-Set-AzureStorageAccount -StorageAccountName $strg -GeoReplicationEnabled $false
+#Set-AzureStorageAccount -StorageAccountName $strg -GeoReplicationEnabled $false
+
+$location
 
 
 .\New-HDInsightCluster.ps1 -Cluster $clusterName -Location $location  `

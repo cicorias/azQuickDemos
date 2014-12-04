@@ -8,9 +8,9 @@ using System.Configuration;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace TwitterSentiment
+namespace TwitterSentimentHelper
 {
-    internal class Config
+    public class Config
     {
 
         string _twitterAppAccessToken = null;
