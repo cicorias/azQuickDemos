@@ -1,0 +1,8 @@
+{ "TwitterAppAccessToken": "<from twitter>",
+    "TwitterAppAccessTokenSecret": "<from twitter>",
+    "TwitterAppApiKey": "<from twitter>",
+    "TwitterAppApiSecret": "<from twitter>",
+    "ClusterName": "https://<from Azure>.azurehdinsight.net/",
+    "HadoopUserName": "admin",
+    "HadoopUserPassword": "<from Azure>", 
+    "HBaseTableName": "tweets_by_words" }
